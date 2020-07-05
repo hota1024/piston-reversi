@@ -742,9 +742,20 @@ version = "0.48.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fb65dffff8d5fdd07479fbdab5238be6515f8290c07cc4bd7f3a36705709fb15"
 dependencies = [
- "pistoncore-event_loop",
+ "pistoncore-event_loop 0.48.0",
  "pistoncore-input",
- "pistoncore-window",
+ "pistoncore-window 0.43.0",
+]
+
+[[package]]
+name = "piston"
+version = "0.50.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ca0b3c95eb02157bb7408ca48090259e491345267768ce0052e1579a8ed1c719"
+dependencies = [
+ "pistoncore-event_loop 0.50.0",
+ "pistoncore-input",
+ "pistoncore-window 0.45.0",
 ]
 
 [[package]]
@@ -825,6 +836,7 @@ dependencies = [
 name = "piston_reversi"
 version = "0.1.0"
 dependencies = [
+ "piston 0.50.0",
  "piston_window",
 ]
 
@@ -836,7 +848,7 @@ checksum = "d9bf60161165ab36166ed11ef9b04a2242ec33a24a110f31bc0dc20a4b642ba6"
 dependencies = [
  "gfx",
  "gfx_device_gl",
- "piston",
+ "piston 0.48.0",
  "piston-texture",
  "piston2d-gfx_graphics",
  "piston2d-graphics",
@@ -851,7 +863,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec6ab0feff7efbc357bf3cfe3045c467a8db8fa7d6f8fb5ed49b892970d0ca91"
 dependencies = [
  "pistoncore-input",
- "pistoncore-window",
+ "pistoncore-window 0.43.0",
+]
+
+[[package]]
+name = "pistoncore-event_loop"
+version = "0.50.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ca8ab6ceb70d368b5feb0873adaa9a60fb30095c32818dff5b6c25e46412e644"
+dependencies = [
+ "pistoncore-input",
+ "pistoncore-window 0.45.0",
 ]
 
 [[package]]
@@ -863,7 +885,7 @@ dependencies = [
  "gl",
  "glutin",
  "pistoncore-input",
- "pistoncore-window",
+ "pistoncore-window 0.43.0",
  "shader_version",
 ]
 
@@ -884,6 +906,16 @@ name = "pistoncore-window"
 version = "0.43.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "292e65aa20ca63eff7b2efdebf611eb8e6efa869a8793aed916bc83163ff1766"
+dependencies = [
+ "piston-graphics_api_version",
+ "pistoncore-input",
+]
+
+[[package]]
+name = "pistoncore-window"
+version = "0.45.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e97b73a1b92db3417f21e43e9a003d6dffdf83bb807036e81baa44e2faea30f9"
 dependencies = [
  "piston-graphics_api_version",
  "pistoncore-input",
